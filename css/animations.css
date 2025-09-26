@@ -1,0 +1,64 @@
+/* 🔹 Плавный скролл */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🔹 Глобальные плавные переходы */
+a,
+button,
+img,
+.card,
+.navbar,
+.section,
+.footer {
+  transition: all 0.3s ease;
+  will-change: transform, opacity;
+}
+
+/* 🔹 Эффект при наведении */
+a:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 🔹 Анимации появления */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.zoom-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}

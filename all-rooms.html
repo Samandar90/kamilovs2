@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kamilovs' Hotel — About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/about.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" data-aos="fade-down">
+      <div class="container">
+        <a class="logo gradient-text" href="index.html">KAMILOVS'</a>
+
+        <ul class="nav-links" id="navDesktop">
+          <li><a class="gradient-text" href="index.html">Home</a></li>
+          <li class="active">
+            <a class="gradient-text" href="rooms.html">Rooms</a>
+          </li>
+          <li><a class="gradient-text" href="about.html">About</a></li>
+          <li><a class="gradient-text" href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile overlay menu -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" data-aos="fade">
+      <ul class="nav-sheet" data-aos="zoom-in" data-aos-delay="200">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li class="active"><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO -->
+    <section
+      class="hero"
+      style="background-image: url('images/bg_1.jpg')"
+      data-aos="fade-up"
+    >
+      <div class="overlay"></div>
+      <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+        <h1>About Hotel</h1>
+        <p>Find your perfect stay with us</p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-section" data-aos="fade-up">
+      <div class="container about-flex">
+        <!-- Изображение -->
+        <div class="about-image" data-aos="zoom-in" data-aos-delay="150">
+          <div class="image-wrapper">
+            <img src="images/reception2.jpg" alt="Hotel Reception" />
+          </div>
+        </div>
+
+        <!-- Текст -->
+        <div class="about-content">
+          <span class="subheading" data-aos="fade-down" data-aos-delay="100">
+            Welcome to Kamilovs' Hotel
+          </span>
+          <h2 data-aos="fade-up" data-aos-delay="200">Welcome To Our Hotel</h2>
+          <p data-aos="fade-up" data-aos-delay="300">
+            We are delighted to welcome you to a place where comfort and
+            attention to detail create the foundation for a perfect stay.
+          </p>
+          <p data-aos="fade-up" data-aos-delay="400">
+            At Kamilov Hotel, we value every guest and are devoted to
+            surrounding you with genuine care and impeccable service.
+          </p>
+          <p data-aos="fade-up" data-aos-delay="500">
+            May your time here be filled with inspiration and harmony — we will
+            do everything to make you long to return again.
+          </p>
+
+          <!-- Соцсети -->
+          <ul class="social-links" data-aos="zoom-in" data-aos-delay="600">
+            <li>
+              <a href="https://t.me/kamilov_hotel"
+                ><span class="icon-telegram"></span
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.booking.com/hotel/uz/kamilovs.ru.html"
+                ><span class="icon-google-plus"></span
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/kamilov_hotel/"
+                ><span class="icon-instagram"></span
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features-section" data-aos="fade-up">
+      <div class="container">
+        <h2 class="features-title text-gradient" data-aos="fade-down">
+          Why Choose Us?
+        </h2>
+        <div class="features-grid">
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon">🏨</div>
+            <h3 class="text-gradient">Luxury Rooms</h3>
+            <p>Spacious, modern, and elegant rooms for your comfort.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon">🥐</div>
+            <h3 class="text-gradient">Delicious Breakfast</h3>
+            <p>Start your day with fresh and tasty meals.</p>
+          </div>
+          <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon">📍</div>
+            <h3 class="text-gradient">Great Location</h3>
+            <p>Located in the very center of Tashkent city.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-modern" data-aos="fade-up">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div
+            style="margin-left: 40px"
+            class="footer-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="footer-title">Kamilovs' Hotel</h3>
+            <p class="footer-desc">
+              Cozy rest in the city center. Comfortable rooms, delicious <br />
+              breakfasts and care for each guest.
+            </p>
+            <div class="footer-social" data-aos="zoom-in" data-aos-delay="200">
+              <a href="https://t.me/kamilov_hotel" aria-label="Telegram">
+                <span class="icon-telegram"></span>
+              </a>
+              <a
+                href="https://www.booking.com/hotel/uz/kamilovs.ru.html"
+                aria-label="Booking"
+              >
+                <span class="icon-google-plus"></span>
+              </a>
+              <a
+                href="https://www.instagram.com/kamilov_hotel/"
+                aria-label="Instagram"
+              >
+                <span class="icon-instagram"></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacts -->
+          <div
+            style="margin-left: 40px"
+            class="footer-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h3 class="footer-title" style="">Have Questions?</h3>
+            <ul class="footer-contacts">
+              <li>
+                <span class="icon-map-marker"></span> Tashkent, Uzbekistan
+              </li>
+              <li>
+                <a href="tel:+998950884141"
+                  ><span class="icon-phone"></span> +998 95 088 41 41</a
+                >
+              </li>
+              <li>
+                <a href="mailto:hotel.mehmonxona@gmail.com"
+                  >hotel.mehmonxona@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Kamilovs' Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS + menu JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        offset: 100,
+      });
+
+      // Mobile menu overlay
+      const toggle = document.getElementById("menuToggle");
+      const overlay = document.getElementById("navOverlay");
+      function toggleMenu() {
+        const open = overlay.classList.toggle("open");
+        document.body.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        overlay.setAttribute("aria-hiddexn", open ? "false" : "true");
+      }
+      toggle.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) toggleMenu();
+      });
+      overlay
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", toggleMenu));
+
+      // scroll nav background
+      const nav = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>

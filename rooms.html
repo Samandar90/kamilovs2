@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Kamilovs' Hotel — Rooms</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/rooms.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar" data-aos="fade-down">
+      <div class="container">
+        <a class="logo gradient-text" href="index.html">KAMILOVS'</a>
+
+        <ul class="nav-links" id="navDesktop">
+          <li><a class="gradient-text" href="index.html">Home</a></li>
+          <li class="active">
+            <a class="gradient-text" href="rooms.html">Rooms</a>
+          </li>
+          <li><a class="gradient-text" href="about.html">About</a></li>
+          <li><a class="gradient-text" href="contact.html">Contact</a></li>
+        </ul>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile overlay menu -->
+    <div class="nav-overlay" id="navOverlay" aria-hidden="true" data-aos="fade">
+      <ul class="nav-sheet" data-aos="fade-up" data-aos-delay="200">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="rooms.html">Rooms</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- HERO -->
+    <section
+      class="hero"
+      style="background-image: url('images/bg_1.jpg')"
+      data-aos="fade-up"
+    >
+      <div class="overlay"></div>
+      <div class="hero-content" data-aos="fade-down" data-aos-delay="200">
+        <h1>Rooms</h1>
+        <p>Find your perfect stay with us</p>
+      </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section class="rooms" data-aos="fade-up">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-down">Our Rooms</h2>
+
+        <div class="rooms-grid">
+          <!-- 1 -->
+          <article class="room-card" data-aos="fade-up" data-aos-delay="0">
+            <div
+              class="room-image"
+              style="background-image: url('images/room-1.jpg')"
+            ></div>
+            <div class="room-info">
+              <h3>Lux Room</h3>
+              <p class="meta">Max 2 • 45 m²</p>
+              <p class="price">$40 / night</p>
+              <a href="room-single.html" class="btn" data-aos="zoom-in"
+                >Book Now</a
+              >
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="room-card" data-aos="fade-up" data-aos-delay="150">
+            <div
+              class="room-image"
+              style="background-image: url('images/room-2.jpg')"
+            ></div>
+            <div class="room-info">
+              <h3>Standard Room</h3>
+              <p class="meta">Max 2 • 45 m²</p>
+              <p class="price">$35 / night</p>
+              <a
+                href="room-single.html"
+                class="btn"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+                >Book Now</a
+              >
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="room-card" data-aos="fade-up" data-aos-delay="300">
+            <div
+              class="room-image"
+              style="background-image: url('images/room-3.jpg')"
+            ></div>
+            <div class="room-info">
+              <h3>Deluxe Room</h3>
+              <p class="meta">Max 2 • 40 m²</p>
+              <p class="price">$50 / night</p>
+              <a
+                href="room-single.html"
+                class="btn"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+                >Book Now</a
+              >
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer-modern" data-aos="fade-up">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div
+            style="margin-left: 40px"
+            class="footer-col"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h3 class="footer-title">Kamilovs' Hotel</h3>
+            <p class="footer-desc">
+              Cozy rest in the city center. Comfortable rooms, delicious <br />
+              breakfasts and care for each guest.
+            </p>
+            <div class="footer-social" data-aos="zoom-in" data-aos-delay="200">
+              <a href="https://t.me/kamilov_hotel" aria-label="Telegram">
+                <span class="icon-telegram"></span>
+              </a>
+              <a
+                href="https://www.booking.com/hotel/uz/kamilovs.ru.html"
+                aria-label="Booking"
+              >
+                <span class="icon-google-plus"></span>
+              </a>
+              <a
+                href="https://www.instagram.com/kamilov_hotel/"
+                aria-label="Instagram"
+              >
+                <span class="icon-instagram"></span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contacts -->
+          <div
+            style="margin-left: 40px"
+            class="footer-col"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h3 class="footer-title" style="">Have Questions?</h3>
+            <ul class="footer-contacts">
+              <li>
+                <span class="icon-map-marker"></span> Tashkent, Uzbekistan
+              </li>
+              <li>
+                <a href="tel:+998950884141"
+                  ><span class="icon-phone"></span> +998 95 088 41 41</a
+                >
+              </li>
+              <li>
+                <a href="mailto:hotel.mehmonxona@gmail.com"
+                  >hotel.mehmonxona@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>© 2025 Kamilovs' Hotel. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- AOS + menu JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // AOS
+      AOS.init({
+        duration: 1000,
+        easing: "ease-in-out",
+        once: true,
+        offset: 100,
+      });
+
+      // Mobile menu overlay
+      const toggle = document.getElementById("menuToggle");
+      const overlay = document.getElementById("navOverlay");
+      function toggleMenu() {
+        const open = overlay.classList.toggle("open");
+        document.body.classList.toggle("menu-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        overlay.setAttribute("aria-hidden", open ? "false" : "true");
+      }
+      toggle.addEventListener("click", toggleMenu);
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) toggleMenu();
+      });
+      overlay
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", toggleMenu));
+
+      // scroll nav background
+      const nav = document.querySelector(".navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+          nav.classList.add("scrolled");
+        } else {
+          nav.classList.remove("scrolled");
+        }
+      });
+    </script>
+  </body>
+</html>
