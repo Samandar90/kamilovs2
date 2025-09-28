@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Kamilovs' Hotel — Rooms</title>
+    <title>Kamilovs' Hotel — Booking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Fonts -->
@@ -11,11 +11,21 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="css/rooms.css" />
+    <link rel="stylesheet" href="css/booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -45,10 +55,10 @@
 
     <!-- Mobile overlay menu -->
     <div class="nav-overlay" id="navOverlay" aria-hidden="true" data-aos="fade">
-      <ul class="nav-sheet" data-aos="fade-up" data-aos-delay="200">
+      <ul class="nav-sheet" data-aos="zoom-in" data-aos-delay="200">
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="rooms.html">Rooms</a></li>
-        <li><a href="about.html">About</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
+        <li><a href="rooms.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -60,76 +70,75 @@
       data-aos="fade-up"
     >
       <div class="overlay"></div>
-      <div class="hero-content" data-aos="fade-down" data-aos-delay="200">
-        <h1>Rooms</h1>
+      <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+        <h1>Booking</h1>
         <p>Find your perfect stay with us</p>
       </div>
     </section>
 
-    <!-- ROOMS -->
-    <section class="rooms" data-aos="fade-up">
+   
+     <section class="booking-section">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Our Rooms</h2>
-
-        <div class="rooms-grid">
-          <!-- 1 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="room-image"
-              style="background-image: url('images/luxroom.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Lux Room</h3>
-              <p class="meta">Max 2 • 45 m²</p>
-              <p class="price">$40 / night</p>
-              <a href="room-single.html" class="btn" data-aos="zoom-in"
-                >Book Now</a
-              >
+        <form action="#" class="booking-form-modern">
+          <div class="row g-3">
+            <!-- Check-in -->
+            <div class="col-md-6">
+              <label for="checkin">Check-in Date</label>
+              <input
+                type="text"
+                id="checkin"
+                class="form-control-modern"
+                placeholder="Select date"
+              />
             </div>
-          </article>
 
-          <!-- 2 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="150">
-            <div
-              class="room-image"
-              style="background-image: url('images/standart.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Standard Room</h3>
-              <p class="meta">Max 2 • 45 m²</p>
-              <p class="price">$35 / night</p>
-              <a
-                href="room-single.html"
-                class="btn"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-                >Book Now</a
-              >
+            <!-- Check-out -->
+            <div class="col-md-6">
+              <label for="checkout">Check-out Date</label>
+              <input
+                type="text"
+                id="checkout"
+                class="form-control-modern"
+                placeholder="Select date"
+              />
             </div>
-          </article>
 
-          <!-- 3 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="300">
-            <div
-              class="room-image"
-              style="background-image: url('images/deluxeroom.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Deluxe Room</h3>
-              <p class="meta">Max 2 • 40 m²</p>
-              <p class="price">$50 / night</p>
-              <a
-                href="room-single.html"
-                class="btn"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-                >Book Now</a
-              >
+            <!-- Room -->
+            <div class="col-md-6">
+              <label>Room</label>
+              <div class="custom-dropdown" id="room-dropdown">
+                <div class="dropdown-selected">Lux Room</div>
+                <ul class="dropdown-options">
+                  <li data-value="lux">Lux Room</li>
+                  <li data-value="standard">Standard</li>
+                  <li data-value="deluxe">Deluxe Room</li>
+                </ul>
+              </div>
             </div>
-          </article>
-        </div>
+
+            <!-- Customer -->
+            <div class="col-md-6">
+              <label>Customer</label>
+              <div class="custom-dropdown" id="customer-dropdown">
+                <div class="dropdown-selected">1 Adult</div>
+                <ul class="dropdown-options">
+                  <li data-value="1">1 Adult</li>
+                  <li data-value="2">2 Adults</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="text-center mt-4">
+            <button type="submit" class="btn-modern">Book</button>
+          </div>
+        </form>
       </div>
     </section>
+
+    
+
 
     <!-- FOOTER -->
     <footer class="footer-modern" data-aos="fade-up">
@@ -234,6 +243,50 @@
         } else {
           nav.classList.remove("scrolled");
         }
+      });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // Календарь
+      const checkin = flatpickr("#checkin", {
+        dateFormat: "Y-m-d",
+        minDate: "today",
+        onChange: function (selectedDates, dateStr) {
+          checkout.set("minDate", dateStr); // ограничение для checkout
+        },
+      });
+
+      const checkout = flatpickr("#checkout", {
+        dateFormat: "Y-m-d",
+        minDate: "today",
+      });
+
+      // Dropdown
+      document.querySelectorAll(".custom-dropdown").forEach((dropdown) => {
+        const selected = dropdown.querySelector(".dropdown-selected");
+        const options = dropdown.querySelector(".dropdown-options");
+
+        selected.addEventListener("click", (e) => {
+          e.stopPropagation();
+          document.querySelectorAll(".custom-dropdown").forEach((d) => {
+            if (d !== dropdown) d.classList.remove("active");
+          });
+          dropdown.classList.toggle("active");
+        });
+
+        options.querySelectorAll("li").forEach((option) => {
+          option.addEventListener("click", () => {
+            selected.textContent = option.textContent;
+            dropdown.classList.remove("active");
+          });
+        });
+      });
+
+      document.addEventListener("click", () => {
+        document
+          .querySelectorAll(".custom-dropdown")
+          .forEach((d) => d.classList.remove("active"));
       });
     </script>
   </body>

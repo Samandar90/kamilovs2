@@ -36,11 +36,10 @@
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/style.index.aggressive.css" />
 
-      <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
     />
-
   </head>
   <body>
     <nav
@@ -49,6 +48,12 @@
     >
       <div class="container">
         <a class="navbar-brand" href="index.html">Kamilovs'</a>
+
+        <!-- Кнопка регистрации (для мобильной версии отдельная) -->
+        <a href="auth.html" class="btn-register-mobile d-lg-none ml-auto"
+          >Register</a
+        >
+
         <button
           class="navbar-toggler"
           type="button"
@@ -77,6 +82,10 @@
             </li>
             <li class="nav-item">
               <a href="contact.html" class="nav-link">Contact</a>
+            </li>
+            <!-- Кнопка регистрации (для десктопа) -->
+            <li class="nav-item d-none d-lg-block">
+              <a href="auth.html" class="btn-register">Register</a>
             </li>
           </ul>
         </div>
@@ -293,7 +302,7 @@
               <a
                 href="rooms.html"
                 class="room-image"
-                style="background-image: url(images/room-1.jpg)"
+                style="background-image: url(images/luxroom.JPG)"
               >
                 <div class="room-icon">
                   <span class="icon-search2"></span>
@@ -307,7 +316,7 @@
                 </p>
                 <hr />
                 <p>
-                  <a href="room-single.html" class="room-btn">
+                  <a href="lux_rooms.html" class="room-btn">
                     View Room Details
                     <span class="icon-long-arrow-right"></span>
                   </a>
@@ -326,7 +335,7 @@
               <a
                 href="rooms.html"
                 class="room-image"
-                style="background-image: url(images/room-2.jpg)"
+                style="background-image: url(images/standart.JPG)"
               >
                 <div class="room-icon">
                   <span class="icon-search2"></span>
@@ -340,7 +349,7 @@
                 </p>
                 <hr />
                 <p>
-                  <a href="room-single.html" class="room-btn">
+                  <a href="standart_rooms.html" class="room-btn">
                     View Room Details
                     <span class="icon-long-arrow-right"></span>
                   </a>
@@ -359,7 +368,7 @@
               <a
                 href="rooms.html"
                 class="room-image"
-                style="background-image: url(images/room-3.jpg)"
+                style="background-image: url(images/deluxeroom.JPG)"
               >
                 <div class="room-icon">
                   <span class="icon-search2"></span>
@@ -373,7 +382,7 @@
                 </p>
                 <hr />
                 <p>
-                  <a href="room-single.html" class="room-btn">
+                  <a href="deluxe_rooms.html" class="room-btn">
                     View Room Details
                     <span class="icon-long-arrow-right"></span>
                   </a>
@@ -600,7 +609,6 @@
       });
     </script>
 
-   
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
       // Календарь

@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #3b82f6, #06b6d4);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.auth-box {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 28px 22px;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 6px 28px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Формы */
+.form {
+  display: none;
+  animation: fadeIn 0.6s ease;
+}
+.form.active {
+  display: block;
+}
+
+.form h1 {
+  font-size: 1.7rem;
+  margin-bottom: 8px;
+  color: #1e3a8a;
+}
+.form p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  color: #475569;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px 6px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 5px rgba(59,130,246,0.4);
+}
+
+/* Телефон */
+.phone-input {
+  display: flex;
+  gap: 10px;
+}
+.phone-input select {
+  flex: 1 1 120px;
+}
+.phone-input input {
+  flex: 2 1 180px;
+}
+
+/* Кнопки */
+.btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(45deg, #1e3a8a, #3b82f6, #06b6d4);
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Ссылки */
+.link {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+.link a {
+  color: #1e3a8a;
+  font-weight: 600;
+  text-decoration: none;
+}
+.link a:hover {
+  text-decoration: underline;
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 22px 18px;
+  }
+  .form h1 {
+    font-size: 1.5rem;
+  }
+  .form p {
+    font-size: 0.9rem;
+  }
+}

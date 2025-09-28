@@ -1,0 +1,443 @@
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #111827;
+  line-height: 1.6;
+  overflow-x: hidden;               /* без горизонтальной прокрутки */
+  background: #ffffff;
+}
+
+[data-aos] {
+  max-width: 100% !important;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; padding: 0; margin: 0; }
+.container { width: min(1200px, 92%); margin-inline: auto; }
+
+/* ---------- Gradient text utility ---------- */
+.gradient-text {
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6, #1e3a8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 1000;
+  background: transparent;          /* прозрачный поверх hero */
+  padding: 16px 0;
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  font-weight: 700;
+  font-size: 28px;                  /* больше текст логотипа */
+  letter-spacing: 1px;
+}
+.nav-links {
+  display: flex;
+  gap: 36px;                        /* немного плотнее */
+  align-items: center;
+}
+.nav-links a {
+  font-weight: 600;
+  font-size: 18px;                  /* больше пункты меню */
+  opacity: 0.95;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.nav-links li.active a,
+.nav-links a:hover { opacity: 1; transform: translateY(-1px); }
+
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ---------- Mobile overlay menu ---------- */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17,24,39,.55);   /* полупрозрачный фон */
+  backdrop-filter: blur(8px);       /* мягкий blur */
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s ease, visibility .35s ease;
+  z-index: 999;
+}
+.nav-overlay.open { opacity: 1; visibility: visible; }
+
+.nav-sheet {
+  width: min(420px, 86%);
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 18px;
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+}
+.nav-sheet li + li { margin-top: 14px; }
+.nav-sheet a {
+  display: block;
+  font-weight: 700;
+  font-size: 22px;
+  color: #ffffff;
+  letter-spacing: .3px;
+  padding: 10px 6px;
+  border-radius: 10px;
+  transition: background .25s ease, transform .2s ease;
+}
+.nav-sheet a:hover { background: rgba(255,255,255,.12); transform: translateY(-1px); }
+.nav-sheet li.active a { background: rgba(255,255,255,.16); }
+
+/* Белый фон и тень при скролле */
+.navbar.scrolled {
+  background: #fff !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Цвет текста и логотипа */
+.navbar.scrolled .nav-link,
+.navbar.scrolled .navbar-brand {
+  color: #1e3a8a !important;
+}
+
+/* Меню-иконка при скролле */
+.navbar.scrolled .navbar-toggler .oi {
+  color: #1e3a8a !important;
+}
+
+
+
+/* блокируем прокрутку под меню */
+body.menu-open { overflow: hidden; }
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero .overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  padding-top: 24vh;                /* отступ чтобы логотип не перекрывал */
+}
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(40px, 6vw, 72px);
+  margin: 0 0 8px;
+}
+.hero-content p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  opacity: .95;
+}
+
+
+/* ---------- Footer ---------- */
+.footer-modern {
+  color: #fff;
+  background: linear-gradient(
+    -45deg,
+    #0f1c4d,
+    #1e3a8a,
+    #3b82f6,
+    #1e3a8a,
+    #0f1c4d
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+
+  padding: 60px 20px 40px; /* равномерные отступы */
+  margin: 0; /* убираем внешние отступы */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-modern .footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-modern .footer-bottom p {
+  margin: 0; /* убираем выпадание параграфа */
+}
+
+/* Анимация градиента */
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 2 больших блока */
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+.footer-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fbbf24;
+}
+
+.footer-desc {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-social a {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 10px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.footer-social a:hover {
+  color: #fbbf24;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-contacts li {
+  margin-bottom: 0.5rem;
+  font-size: 14px;
+}
+.footer-contacts a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+}
+.footer-contacts a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  text-align: center;
+  padding-top: 1rem;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+@media (max-width: 991px) {
+  .nav-links { display: none; }     
+  .menu-toggle { display: block; 
+    color: #1e3a8a;
+}  
+  
+}
+
+@media (max-width: 680px) {
+  .navbar { padding: 14px 0; }
+  .logo { font-size: 26px; }
+}
+
+@media (max-width: 991px) {
+  .hero {
+    min-height: 50vh;
+  }
+}
+
+
+
+.booking-section {
+  position: relative;
+  overflow: visible;
+  z-index: 0;
+  padding: 3rem 0;
+  background: #f8fafc;
+  font-family: "Poppins", sans-serif;
+}
+
+.booking-form-modern {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: visible;
+}
+
+.booking-form-modern label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e3a8a;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-control-modern {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #f9fafb;
+}
+
+.form-control-modern:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  outline: none;
+  background: #fff;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.dropdown-selected {
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  background: #f9fafb;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-selected:hover {
+  border-color: #3b82f6;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  margin-top: 5px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 8px 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.25s ease;
+
+  z-index: 9999;
+}
+
+.dropdown-options li {
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-options li:hover {
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.custom-dropdown.active .dropdown-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.custom-dropdown.active {
+  z-index: 9999 !important;
+}
+
+#room-dropdown .dropdown-options {
+  z-index: 10000 !important; /* СЃРїРёСЃРѕРє С‚РѕС‡РЅРѕ СЃР°РјС‹Р№ РІРµСЂС…РЅРёР№ */
+}
+
+.btn-modern {
+  padding: 12px 28px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;  
+  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+
+  position: relative;
+  z-index: 1;
+}
+
+.btn-modern:hover {
+  background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+  box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.flatpickr-calendar {
+  font-family: "Poppins", sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
+
+.flatpickr-day.today {
+  border-color: #1e3a8a;
+}
+
+

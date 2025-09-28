@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamilovs' Hotel - Auth</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+  <section class="auth">
+    <div class="auth-box" data-aos="zoom-in" data-aos-duration="800">
+
+      <!-- Login -->
+      <form id="login-form" class="form active">
+        <h1>Welcome Back</h1>
+        <p>Login to manage your bookings</p>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" required>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <p class="link">
+          Don’t have an account? <a href="#" onclick="switchForm('register-form')">Register</a>
+        </p>
+        <p class="link">
+          <a href="#" onclick="switchForm('reset-form')">Forgot Password?</a>
+        </p>
+      </form>
+
+      <!-- Registration -->
+      <form id="register-form" class="form">
+        <h1>Create Account</h1>
+        <p>Join Kamilovs’ Hotel and manage your bookings</p>
+
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="form-group">
+          <label for="country-code">Phone Number</label>
+          <div class="phone-input">
+            <select id="country-code" required aria-label="Country code">
+              <option value="">Loading countries...</option>
+            </select>
+            <input type="tel" placeholder="123 456 789" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Register</button>
+
+        <p class="link">
+          Already have an account? <a href="#" onclick="switchForm('login-form')">Login</a>
+        </p>
+      </form>
+
+      <!-- Reset Password -->
+      <form id="reset-form" class="form">
+        <h1>Forgot Password?</h1>
+        <p>Enter your email address and we’ll send a reset link.</p>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="example@mail.com" required>
+        </div>
+
+        <button type="submit" class="btn">Send Reset Link</button>
+
+        <p class="link">
+          Remember your password? <a href="#" onclick="switchForm('login-form')">Login</a>
+        </p>
+      </form>
+
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    // переключение форм
+    function switchForm(formId) {
+      document.querySelectorAll(".form").forEach(f => f.classList.remove("active"));
+      document.getElementById(formId).classList.add("active");
+    }
+
+    // загрузка стран
+    fetch("country-codes.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("country-code").innerHTML = data;
+      })
+      .catch(() => {
+        document.getElementById("country-code").innerHTML = '<option value="">Error loading</option>';
+      });
+  </script>
+
+</body>
+</html>

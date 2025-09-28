@@ -1,4 +1,4 @@
-﻿:root {
+﻿﻿:root {
   --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -41,6 +41,7 @@
 html {
   font-family: sans-serif;
   line-height: 1.15;
+  scroll-behavior: smooth;
   width: 100%;
   overflow-x: clip;
 
@@ -8710,9 +8711,6 @@ body {
 
 body.menu-show {
   overflow: hidden;
-  position: fixed;
-  height: 100%;
-  width: 100%;
 }
 
 a {
@@ -11250,28 +11248,28 @@ textarea.form-control {
 @media (max-width: 768px) {
   .about-section {
     padding: 3rem 1rem;
-    height: 1300px;
+    height: 1150px;
   }
 
   .about-content {
     padding-left: 0;
-    margin-top: 100px;
+    margin-top: 65px;
     text-align: center;
   }
 
   .about-content h2 {
     font-size: 28px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   .about-content p {
     font-size: 15px;
-    margin-top: 30px;
+    margin-top: 20px;
   }
 
   .social-links {
     justify-content: center;
-    margin-top: 70px;
+    margin-top: 50px;
   }
 }
 
@@ -11743,4 +11741,100 @@ iframe {
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+/* Общий стиль для Register кнопок */
+.btn-register {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff !important;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 13px;
+
+  /* Градиент с анимацией */
+  background: linear-gradient(
+    -45deg,
+    #0f1c4d,
+    #1e3a8a,
+    #3b82f6,
+    #1e3a8a,
+    #0f1c4d
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+.btn-register-mobile {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff !important;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+
+  /* Градиент с анимацией */
+  background: linear-gradient(
+    -45deg,
+    #0f1c4d,
+    #1e3a8a,
+    #3b82f6,
+    #1e3a8a,
+    #0f1c4d
+  );
+  background-size: 400% 400%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+/* Shine эффект */
+.btn-register::before,
+.btn-register-mobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-20deg);
+  animation: shine 4s ease-in-out infinite;
+}
+
+/* Hover эффекты */
+.btn-register:hover,
+.btn-register-mobile:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(30, 64, 175, 0.45);
+  text-decoration: none;
+}
+
+/* Анимация shine */
+@keyframes shine {
+  0% { left: -75%; }
+  20% { left: 125%; }
+  100% { left: 125%; }
+}
+
+/* Анимация движения градиента */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }

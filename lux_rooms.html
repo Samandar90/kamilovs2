@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Kamilovs' Hotel — Rooms</title>
+    <title>Kamilovs' Hotel — Lux Rooms</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Fonts -->
@@ -11,11 +11,17 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/ionicons.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/icomoon.css" />
+
     <!-- AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
     <!-- Page CSS -->
-    <link rel="stylesheet" href="css/rooms.css" />
+    <link rel="stylesheet" href="css/lux_rooms.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -45,9 +51,9 @@
 
     <!-- Mobile overlay menu -->
     <div class="nav-overlay" id="navOverlay" aria-hidden="true" data-aos="fade">
-      <ul class="nav-sheet" data-aos="fade-up" data-aos-delay="200">
+      <ul class="nav-sheet" data-aos="zoom-in" data-aos-delay="200">
         <li><a href="index.html">Home</a></li>
-        <li class="active"><a href="rooms.html">Rooms</a></li>
+        <li><a href="rooms.html">Rooms</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -60,73 +66,70 @@
       data-aos="fade-up"
     >
       <div class="overlay"></div>
-      <div class="hero-content" data-aos="fade-down" data-aos-delay="200">
-        <h1>Rooms</h1>
+      <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+        <h1>Lux Rooms</h1>
         <p>Find your perfect stay with us</p>
       </div>
     </section>
 
-    <!-- ROOMS -->
-    <section class="rooms" data-aos="fade-up">
+    <section class="lux-room">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Our Rooms</h2>
+        <!-- Заголовок -->
+        <div class="lux-header">
+          <h1>Luxury Room</h1>
+          <p class="subtitle">Elegance & Comfort in the heart of Tashkent</p>
+        </div>
 
-        <div class="rooms-grid">
-          <!-- 1 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="0">
-            <div
-              class="room-image"
-              style="background-image: url('images/luxroom.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Lux Room</h3>
-              <p class="meta">Max 2 • 45 m²</p>
-              <p class="price">$40 / night</p>
-              <a href="room-single.html" class="btn" data-aos="zoom-in"
-                >Book Now</a
-              >
-            </div>
-          </article>
+        <!-- Основной блок -->
+        <div class="lux-content">
+          <!-- Фото -->
+          <div class="lux-image">
+            <img src="images/luxroom.JPG" alt="Luxury Room" />
+          </div>
 
-          <!-- 2 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="150">
-            <div
-              class="room-image"
-              style="background-image: url('images/standart.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Standard Room</h3>
-              <p class="meta">Max 2 • 45 m²</p>
-              <p class="price">$35 / night</p>
-              <a
-                href="room-single.html"
-                class="btn"
-                data-aos="zoom-in"
-                data-aos-delay="200"
-                >Book Now</a
-              >
-            </div>
-          </article>
+          <!-- Описание -->
+          <div class="lux-info">
+            <h2>About this Room</h2>
+            <p>
+              Our Luxury Room offers a spacious and stylish interior with a
+              king-size bed, private balcony, modern bathroom and elegant
+              furniture. Designed for travelers who value both comfort and
+              aesthetics.
+            </p>
 
-          <!-- 3 -->
-          <article class="room-card" data-aos="fade-up" data-aos-delay="300">
-            <div
-              class="room-image"
-              style="background-image: url('images/deluxeroom.JPG')"
-            ></div>
-            <div class="room-info">
-              <h3>Deluxe Room</h3>
-              <p class="meta">Max 2 • 40 m²</p>
-              <p class="price">$50 / night</p>
-              <a
-                href="room-single.html"
-                class="btn"
-                data-aos="zoom-in"
-                data-aos-delay="400"
-                >Book Now</a
-              >
+            <div class="lux-price">$40 / Night</div>
+
+            <!-- Удобства -->
+            <div class="lux-features">
+              <h3>Room Amenities</h3>
+              <ul>
+                <li>🛏 King-size Bed</li>
+                <li>📺 55" Smart TV</li>
+                <li>📶 High-speed Wi-Fi</li>
+                <li>❄ Air Conditioning</li>
+                <li>🚿 Private Bathroom with Shower</li>
+                <li>🛁 Bathtub</li>
+                <li>🍽 Breakfast Included</li>
+                <li>🧴 Complimentary Toiletries</li>
+                <li>🪟 Private Balcony with City View</li>
+                <li>💻 Workspace Desk</li>
+              </ul>
             </div>
-          </article>
+
+            <!-- Кнопка бронирования -->
+            <a href="#booking" class="btn-book">Book Now</a>
+          </div>
+        </div>
+
+        <!-- Галерея -->
+        <div class="lux-gallery">
+          <h3>Gallery</h3>
+          <div class="gallery-grid">
+            <img src="images/img1.JPG" alt="Room View 1" />
+            <img src="images/img2.JPG" alt="Room View 2" />
+            <img src="images/img4.JPG" alt="Room View 3" />
+            <img src="images/toilet.JPG" alt="Room View 4" />
+          </div>
         </div>
       </div>
     </section>
