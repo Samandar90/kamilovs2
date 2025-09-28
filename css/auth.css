@@ -140,3 +140,28 @@ body {
     font-size: 0.9rem;
   }
 }
+
+
+.back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      position: fixed;   /* фиксируем сверху страницы */
+      top: 16px;
+      left: 16px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #1e3a8a;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      z-index: 1000; /* всегда сверху */
+    }
+    .back-btn:hover {
+      background: #1e3a8a;
+      color: #fff;
+      box-shadow: 0 4px 10px rgba(30,58,138,0.25);
+    }
